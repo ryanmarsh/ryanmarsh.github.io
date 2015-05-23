@@ -1,0 +1,50 @@
+.menu-wrap {
+  width:100%;
+  box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+  background: #3e3436;
+
+}
+
+.menu {
+  width: 1000px;
+  margin:0px auto;
+}
+
+.menu li{
+  margin:0px
+  padding: 0px;
+  list-style:none;
+  font-family:'Ek Mukta';
+
+}
+
+.menu a {
+  transitinon:all linear 0.15s;
+  color: #919191;
+
+}
+
+.menu li:hover > a, .menu .current-item > a {
+  text- decoration:none;
+  color:#be5b70;
+
+}
+
+.menu .arrow {
+  font-size:11px;
+  line-height: 0%;
+
+}
+
+.main {
+  width: 1000px;
+  margin:0px auto;
+
+}
+
+.main p {
+  margin: 20px;
+  font-size: 30px;
+  color: #be5b70;
+  font-family: 'Ek Mukta';
+}
