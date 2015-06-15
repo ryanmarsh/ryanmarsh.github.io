@@ -1,72 +1,80 @@
 <!DOCTYPE html>
- <html>
+<html>
 
-   <head>
-     <link href="background.css" rel="stylesheet" >
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      <script src="app.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-      <script type="text/javascript">
+  <head>
+    <link href="background.css" rel="stylesheet" >
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script src="app.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+     <script type="text/javascript">
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 
-      var slideimages = new Array()
-      slideimages[0] = new Image()
-      slideimages[0].src = "https://download.unsplash.com/photo-1429091967365-492aaa5accfe"
-      slideimages[1] = new Image()
-      slideimages[1].src = "https://download.unsplash.com/photo-1428908728789-d2de25dbd4e2"
-      slideimages[2] = new Image()
-      slideimages[2].src = "https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&q=75&w=1050"
-      </script>
+     var slideimages = new Array()
+     slideimages[0] = new Image()
+     slideimages[0].src = "https://download.unsplash.com/photo-1429091967365-492aaa5accfe"
+     slideimages[1] = new Image()
+     slideimages[1].src = "https://download.unsplash.com/photo-1428908728789-d2de25dbd4e2"
+     slideimages[2] = new Image()
+     slideimages[2].src = "https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&q=75&w=1050"
+     </script>
 
-  </head>
+ </head>
 
-   <body>
+  <body>
 
-     <div class="menu-wrap">
-       <nav class="menu">
-         <ul class="clearfix">
+    <div class="menu-wrap">
+      <nav class="menu">
+        <ul class="clearfix">
 
-           <li><a href="#">Home<span class="arrow">&#9660;</span></a>
+          <li><a href="#">Home<span class="arrow">&#9660;</span></a>
 
-             <ul class="sub-menu">
+            <ul class="sub-menu">
 
-               <li><a href="#">Projects</a></li>
-               <li><a href="anotherpage.html">Contact</a></li>
-         </ul>
-       </li>
-     </ul>
-   </nav>
- </div>
+              <li><a href="#">Projects</a></li>
+              <li><a href="anotherpage.html">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
 
-      <div class= "main">
-        <nav class= "content">
-          <p> Welcome to my webpage I will be working on it frequently to try out new things and learn differnt techniques</p>
-        </nav>
-      </div>
+     <div class= "main">
+       <nav class= "content">
+         <p> Welcome to my webpage I will be working on it frequently to try out new things and learn differnt techniques</p>
+       </nav>
+     </div>
 
-      <div class="slide-show">
-        <img src="https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&q=75&w=1050" id="slide" width = 1000 height = 1000 />
-        <script type="text/javascript">
-        var step = 0
+     <div class="slide-show">
+       <img src="https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&q=75&w=1050" id="slide" width = 1000 height = 1000 />
+       <script type="text/javascript">
+       var step = 0
 
-        function slideit(){
-          if (!document.images)
-          return
-          document.getElementById('slide').src = slideimages[step].src
-          if (step<2)
-           step++
-           else step=0
-           setTimeout("slideit()", 2500)
-        }
-        slideit()
-        </script>
+       function slideit(){
+         if (!document.images)
+         return
+         document.getElementById('slide').src = slideimages[step].src
+         if (step<2)
+          step++
+          else step=0
+          setTimeout("slideit()", 2500)
+       }
+       slideit()
+       </script>
 
-        
+      <script>
+        $(document).ready(function() {
+       // This line applies the datepicker options to the element with an id attribute of "ScheduledDate"
+       // It also sets an option to require the minimum date that they can select to be today
+            $( "#ScheduledDate" ).datepicker({ minDate: +0 });
+          });
+</script>
 
 
 
 
 
 
-  </body>
- </html>
+ </body>
+</html>
