@@ -1,13 +1,15 @@
 .menu-wrap {
   width:100%;
-  box-shadow:0px 1px 3px rgba(0,0,0,0.2);
-  background: #3e3436;
+  box-shadow:0px 1px 3px rgba());
+  background: #88A6B2;
 
 }
 
 .menu {
   width: 1000px;
   margin:0px auto;
+
+
 }
 
 .menu li{
@@ -15,18 +17,20 @@
   padding: 0px;
   list-style:none;
   font-family:'Ek Mukta';
+  color: #403D3E;
+
 
 }
 
 .menu a {
   transitinon:all linear 0.15s;
-  color: #919191;
+  color: #403D3E;
 
 }
 
 .menu li:hover > a, .menu .current-item > a {
   text- decoration:none;
-  color:#be5b70;
+  color:#403D3E;
 
 }
 
@@ -37,14 +41,63 @@
 }
 
 .main {
-  width: 1000px;
+  width: 0px auto;
   margin:0px auto;
 
 }
 
-.main p {
+.main h1 {
   margin: 20px;
   font-size: 30px;
-  color: #be5b70;
+  color: #B2AAA0;
   font-family: 'Ek Mukta';
+  text-align: center;
+}
+
+.slide-show
+
+<style type="text/css">
+    ul{
+        padding: 0;
+        list-style: none;
+        background: #f2f2f2;
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: left;
+    }
+    ul li a{
+        display: block;
+        padding: 8px 25px;
+        color: #333;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: #fff;
+        background: #939393;
+    }
+    ul li ul.dropdown{
+        min-width: 125px; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+</style>
+
+.split h1 {
+  margin:20px;
+  font-size:30px;
+  font-family:'Ek-Mukta';
+  text-align: center;
+
 }
