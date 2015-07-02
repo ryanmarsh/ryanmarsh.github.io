@@ -2,49 +2,13 @@
 <html>
 
   <head>
-  <style type="text/css">
-      ul{
-          padding: 0;
-          list-style: none;
-          background: #f2f2f2;
-      }
-      ul li{
-          display: inline-block;
-          position: relative;
-          line-height: 21px;
-          text-align: left;
-      }
-      ul li a{
-          display: block;
-          padding: 8px 25px;
-          color: #333;
-          text-decoration: none;
-      }
-      ul li a:hover{
-          color: #fff;
-          background: #939393;
-      }
-      ul li ul.dropdown{
-          min-width: 125px; /* Set width of the dropdown */
-          background: #f2f2f2;
-          display: none;
-          position: absolute;
-          z-index: 999;
-          left: 0;
-      }
-      ul li:hover ul.dropdown{
-          display: block;	/* Display the dropdown */
-      }
-      ul li ul.dropdown li{
-          display: block;
-      }
-  </style>
+
+
     <link href="background.css" rel="stylesheet" >
      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="app.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-     <script type="text/javascript">
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 
@@ -58,6 +22,7 @@
      slideimages[2].src = "https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&q=75&w=1050"
      </script>
 
+
  </head>
 
   <body>
@@ -66,44 +31,58 @@
       <nav class="menu">
         <ul class="clearfix">
 
-          <li><a href="#">Home &#9660;</span></a>
+          <li><a href="#">Home &#9660;</a>
 
             <ul class="dropdown">
 
               <li><a href="#">Projects</a></li>
 
-              <li><a href="index2.html">Contact</a></li>
+              <li><a href="index2.html" target = "_blank">Contact</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 </div>
 
-     <div class= "main">
-       <nav class= "content">
-         <p> Welcome to my webpage I will be working on it frequently to try out new things and learn differnt techniques (Work in progress, changes are coming)</p>
-       </nav>
+     <section class= "main">
+       <div class= "content">
+         <h1> Ryan Marsh <h1>
+       </div>
+     </section>
+
+     <section class= "about">
+       <div class="split">
+
+     <h1> About </h1>
+       <pre> Well lets start by saying I am a new father, I have a son who is
+         now 4 months old. I have been coding for a little while now and am looking
+         to become a developer. Currently I am working at a school doing landscape maintenance
+         and some vineyard work on the side. I love to play soccer and I also coach soccer
+         I love to do research on how things work and would love to learn more.
+       </pre>
      </div>
+     </section>
 
-     <div class="slide-show">
-       <img src="https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&q=75&w=1050" id="slide" width = 1000 height = 1000 />
-       <script type="text/javascript">
-       var step = 0
+     <section class= "second">
+       <div class= "slider">
+         <img src="https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&q=75&w=1050" id="slide" width = 1000 height = 1000 />
+     <script type="text/javascript">
+     var step = 0
+     function slideit(){
+       if (!document.images)
+       return
+       document.getElementById('slide').src = slideimages[step].src
+       if (step<2)
+        step++
+        else step=0
+        setTimeout("slideit()", 2500)
+     }
+     slideit()
+     </script>
+   </div>
+   </section>
 
-       function slideit(){
-         if (!document.images)
-         return
-         document.getElementById('slide').src = slideimages[step].src
-         if (step<2)
-          step++
-          else step=0
-          setTimeout("slideit()", 2500)
-       }
-       slideit()
-       </script>
 
-
-        
 
 
 
