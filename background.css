@@ -54,9 +54,7 @@
   text-align: center;
 }
 
-.slide-show
 
-<style type="text/css">
     ul{
         padding: 0;
         list-style: none;
@@ -92,12 +90,11 @@
     ul li ul.dropdown li{
         display: block;
     }
-</style>
 
 .split h1 {
   margin:20px;
   font-size:30px;
-  font-family:'Ek-Mukta';
+  font-family:'Open Sans', Courier;
   text-align: center;
 
 }
