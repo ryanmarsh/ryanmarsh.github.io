@@ -16,7 +16,7 @@
   margin:0px
   padding: 0px;
   list-style:none;
-  font-family:'Ek Mukta';
+  font-family: 'Open Sans' !important;
   color: #403D3E;
 
 
@@ -50,7 +50,7 @@
   margin: 20px;
   font-size: 30px;
   color: #B2AAA0;
-  font-family: 'Ek Mukta';
+  font-family: 'Open Sans' !important;
   text-align: center;
 }
 
@@ -91,10 +91,9 @@
         display: block;
     }
 
-.split h1 {
+.about .split h1 {
   margin:20px;
   font-size:30px;
-  font-family:'Open Sans', Courier;
+  font-family: 'Open Sans' !important;
   text-align: center;
-
 }
