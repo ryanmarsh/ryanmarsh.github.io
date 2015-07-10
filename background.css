@@ -49,7 +49,7 @@
 .main h1 {
   margin: 20px;
   font-size: 30px;
-  color: #f4b15e;
+  color: #B2AAA0;
   font-family: 'Open Sans' !important;
   text-align: center;
 }
@@ -96,4 +96,17 @@
   font-size:30px;
   font-family: 'Open Sans' !important;
   text-align: center;
+}
+
+.about .split pre {
+  margin: 20px;
+  font-size: 15px;
+  font-family: 'Open Sans';
+  text-align: center;
+}
+
+.second .slider img {
+  margin: auto 0px;
+  width: 1425px;
+  height: 500px;
 }
