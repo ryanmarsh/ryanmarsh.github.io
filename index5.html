@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang= "en">
+<head>
+    <meta charset="utf-8">
+    <link href="background.css" rel="stylesheet"></link>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Time-line</title>
+</head>
+
+<body>
+
+  <section class = "goals">
+    <!-- You will need to convert css to LESS -->
+  <div class="timeline">
+      <div class="timeline-item active">
+          <div class="year">2013 <span class="marker"><span class="dot"></span></span>
+          </div>
+          <div class="info">Married the woman of my dreams.</div>
+
+      </div>
+      <div class="timeline-item">
+          <div class="year">2015 <span class="marker"><span class="dot"></span></span>
+          </div>
+          <div class="info">Became a new dad</div>
+      </div>
+      <div class="timeline-item">
+          <div class="year">2015 <span class="marker"><span class="dot"></span></span>
+          </div>
+          <div class="info">Get a job as a developer</div>
+      </div>
+      <div class="timeline-item">
+          <div class="year">2020 <span class="marker"><span class="dot"></span></span>
+          </div>
+          <div class="info">Go on vaction to Europe with my kid and wife.</div>
+      </div>
+      <div class="timeline-item">
+          <div class="year">2025<span class="marker"><span class="dot"></span></span>
+          </div>
+          <div class="info">Own Aston Martin and take a road trip to where we had our honeymoon.</div>
+      </div>
+      <div class="timeline-item">
+          <div class="year">2030 <span class="marker"><span class="dot"></span></span>
+          </div>
+          <div class="info">Love wife for rest of our lives.</div>
+      </div>
+  </div>
+    <script>
+    $(".timeline-item").hover(function () {
+     $(".timeline-item").removeClass("active");
+     $(this).toggleClass("active");
+     $(this).prev(".timeline-item").toggleClass("close");
+     $(this).next(".timeline-item").toggleClass("close");
+ });
+ </script>
+ </div>
+ </section>
+
+<section class= "back">
+
+     <li><a href="https://ryanmarsh.github.io/">Back</a></li>
+
+ </section>
+
+</body>
+</html>
