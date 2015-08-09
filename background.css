@@ -2,6 +2,8 @@
   width:100%;
   box-shadow:0px 1px 3px rgba(0,0,0,1));
   background: #A1C4D2;
+  display: block;
+  float: left;
 
 }
 
@@ -116,6 +118,7 @@
   margin: auto 0px;
   width: 1425px;
   height: 300px;
+  display: block;
 }
 
 div {
