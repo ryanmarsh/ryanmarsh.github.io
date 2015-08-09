@@ -53,11 +53,13 @@
 
 .main h1 {
   margin: 20px;
-  font-size: 30px;
-  color: #B04F35;
-  font-family: 'Open Sans' !important;
+  font-size: 50px;
+  font-weight: bold;
+  color: #FF5B38;
+  font-family: 'Dancing Script', cursive;
   text-align: center;
 }
+
 
 
     ul{
