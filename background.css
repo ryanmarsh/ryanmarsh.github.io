@@ -7,13 +7,6 @@
   opacity: 1;
 }
 
-.menu {
-  width: 1000px;
-  margin:0px auto;
-
-
-}
-
 .menu li{
   margin:0px
   padding: 0px;
@@ -22,6 +15,7 @@
   color: #FFFFFF;
   float: left;
   background: #8398A3;
+  width: auto;
   
 
 
