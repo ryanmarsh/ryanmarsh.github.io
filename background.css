@@ -1,3 +1,7 @@
+@-ms-viewport{
+  width: device-width;
+}
+
 #menu-bar .menu {
   width: 100%;
   background: #8398A3;
