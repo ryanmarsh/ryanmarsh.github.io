@@ -1,6 +1,5 @@
 #menu-bar {
   width: 100%;
- 
   background: #8398A3;
   display: block;
   float: left;
@@ -21,6 +20,9 @@
   list-style:none;
   font-family: 'Open Sans' !important;
   color: #FFFFFF;
+  float: left;
+  background: #8398A3;
+  
 
 
 }
