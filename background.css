@@ -2,7 +2,8 @@
   width: device-width;
 }
 
-#menu-bar .menu .ul{
+#menu-bar .menu .ul
+  {
   width: 100%;
   background: #8398A3;
   display: block;
@@ -11,34 +12,34 @@
   opacity: 1;
 }
 
-.menu li{
+.menu li
+  {
   margin:auto;
   list-style:none;
   font-family: 'Open Sans' !important;
   color: #FFFFFF;
   background: #8398A3;
   width: auto;
-  
+  }
 
-
-}
-
-.menu a {
+.menu a 
+  {
   transitinon:all linear 0.15s;
   color: #403D3E;
 
 }
 
-.menu li:hover > a, .menu .current-item > a {
+.menu li:hover > a, .menu .current-item > a
+  {
   text- decoration:none;
   color:#403D3E;
 
 }
 
-.main {
+.main
+  {
   width: 0px auto;
   margin:0px auto;
-
 }
 
 .main h1 {
