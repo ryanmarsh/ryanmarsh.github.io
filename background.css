@@ -109,10 +109,10 @@
   display: block;
 }
 
-div {
-    font-family: Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
+.footer {
+  color: blue;
 }
+
 .timeline {
   position: absolute;
  top: 50%;
