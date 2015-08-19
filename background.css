@@ -42,12 +42,6 @@
 
 }
 
-.menu .arrow {
-  font-size:11px;
-  line-height: 0%;
-
-}
-
 .main {
   width: 0px auto;
   margin:0px auto;
@@ -108,7 +102,7 @@
   text-align: center;
 }
 
-.about .split pre {
+.about .split p {
   margin: 20px;
   font-size: 15px;
   font-family: 'Open Sans';
