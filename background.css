@@ -44,7 +44,7 @@
 
 .main {
   width: 0px auto;
-  margin:0px auto;
+  margin:100px;
 
 }
 
@@ -120,7 +120,7 @@
 .second .slider img {
   margin: auto 0px;
   width: 1425px;
-  height: 700px;
+  height: 600px;
   display: block;
 }
 
