@@ -14,7 +14,7 @@
 }
 
 .menu {
-  width: 0px;
+  position: -100px;
   margin:0px;
 
 
