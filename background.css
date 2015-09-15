@@ -47,24 +47,11 @@
 
 }
 
-.main h1 {
-  margin: 10px;
-  font-size: 50px;
-  color: #3E4756;
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-}
-
-.main h2 {
-  margin: 10px;
-  font-size: 60px;
-  color:#3E4756;
-  font-family:'Lato', sans-serif;
-  text-align: center;
-}
+.main img {
+  width: 950px;
+  height: 450px;
   
-
-
+}
 
     ul{
         padding: 0;
