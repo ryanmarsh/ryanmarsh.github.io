@@ -48,8 +48,11 @@
 }
 
 .main img {
-  width: 950px;
-  height: 450px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 1000px;
+  height: 650px;
   
   
 }
