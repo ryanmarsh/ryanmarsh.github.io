@@ -1,9 +1,8 @@
 .menu-wrap {
-  width: 1425px;
+  width: 1415px;
   box-shadow:0px 1px 3px rgba(0,0,0,1));
   background: #8398A3;
   display: block;
-  float: left;
   height: 55px;
   opacity: 1;
 }
@@ -41,11 +40,6 @@
 
 }
 
-.main {
-  width: 0px auto;
-  margin:100px;
-
-}
 
 .main img {
   display:block;
