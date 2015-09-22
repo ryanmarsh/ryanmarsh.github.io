@@ -12,13 +12,10 @@
   width:100%;
 }
 
-.menu {
-  margin:0px;
 
 
-}
 
-.menu li{
+.nav li{
   margin:0px
   padding: 0px;
   list-style:none;
@@ -28,13 +25,13 @@
 
 }
 
-.menu a {
+.nav a {
   transitinon:all linear 0.15s;
   color: #403D3E;
 
 }
 
-.menu li:hover > a, .menu .current-item > a {
+.nav li:hover > a, .menu .current-item > a {
   text- decoration:none;
   color:#403D3E;
 
