@@ -123,8 +123,8 @@ div {
     font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
 }
-.time .timeline  {
-  background-color:#001BD4;
+ .timeline  {
+background-color:#001BD4;
  top: 50%;
  left: 50%;
  width: 500px;
