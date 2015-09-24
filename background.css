@@ -93,6 +93,10 @@ html, body {
     ul li ul.dropdown li{
         display: block;
     }
+    
+.about{
+  background-color:#00D43C;
+}
 
 .about .split h1 {
   margin:20px;
@@ -120,6 +124,7 @@ div {
     box-sizing: border-box;
 }
 .timeline {
+  background-color:#D42700;
  top: 50%;
  left: 50%;
  width: 500px;
