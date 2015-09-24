@@ -100,14 +100,16 @@ html, body {
 
 .about .split h1 {
   font-size:60px;
-  font-family: 'Open Sans' !important;
+  font-family: 'Lato 400';
+  font-weight: bold;
   text-align: center;
 }
 
 .about .split p {
   margin: 20px;
   font-size: 20px;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
+  font-weight: 300;
   text-align: center;
 }
 
