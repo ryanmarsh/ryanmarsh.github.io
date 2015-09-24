@@ -94,7 +94,7 @@ html, body {
         display: block;
     }
     
-.about .section{
+.about {
   background-color:#00D43C;
 }
 
@@ -123,7 +123,7 @@ div {
     font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
 }
-.timeline .section {
+.timeline  {
   background-color:#001BD4;
  top: 50%;
  left: 50%;
