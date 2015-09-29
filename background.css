@@ -99,7 +99,7 @@ html, body {
 }
 
 .about .split h1 {
-  font-size:60px;
+  font-size:90px;
   font-family: 'Lato 400';
   font-weight: bold;
   text-align: left;
@@ -107,7 +107,7 @@ html, body {
 
 .about .split p {
   margin: 20px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Lato';
   font-weight: 300;
   text-align: center;
@@ -117,7 +117,7 @@ html, body {
   display: background;
   margin: auto 0px;
   width: 1425px;
-  height: 700px;
+  height: 800px;
   display: block;
 }
 
@@ -137,7 +137,7 @@ background-color:;
 .timeline h1{
   font-family:'Lato';
   margin: 60px;
-  font-size: 60px;
+  font-size: 90px;
   text-align: left;
 }
 .timeline .timeline-item {
