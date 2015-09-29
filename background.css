@@ -214,3 +214,20 @@ background-color:;
     background-color: #9DB668;
     box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+
+.contact .5th h1 {
+  font-family: "Lato";
+  font-size: 90px;
+  font-weight: bold;
+  text-align: left;
+  margin: 20px;
+  display:block;
+  
+}
+
+.contact .5th a {
+  font-family: "Lato";
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
