@@ -156,10 +156,6 @@ icon {
   font-family: sans-serif;
 }
 
-.icon:nth-child(1) { background: cornflowerblue; }
-.icon:nth-child(2) { background: salmon; }
-.icon:nth-child(3) { background: gray; }
-
 /**
  * The "shine" element
  */
