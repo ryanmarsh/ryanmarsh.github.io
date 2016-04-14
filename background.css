@@ -32,7 +32,7 @@ body{
  }
 
 .container  li a {
-     display: block;
+     display: flex;
      color: white;
      text-align: center;
      padding: 14px 16px;
@@ -58,12 +58,27 @@ h1{
 }
 
 .about, .skills, .project {
-  display: inline-block;
+  display: inline-flex;
   position:relative;
   padding-left: 15px;
   padding-right:15px;
-  float:left;
-  width: 31%;
+  width: 33%;
+}
+
+.first{
+  display:inline-flex;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 15px;
+
+}
+
+.second {
+  display:inline-flex;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 15px;
+
 }
 
 h2, h3, h4, {
@@ -99,7 +114,7 @@ svg:hover {
 }
 
 button {
-  display: inline-block;
+  display: inline-flex;
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
@@ -139,14 +154,14 @@ button:hover span:after {
 }
 
 
-icon {
-  position: relative;
+.icon {
+  position: relative;;
   overflow: hidden;
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  
-  margin: 25px 0 25px 25px;
+  width: 150px;
+  height: 150px;
+  display: inline-flex;
+
+  margin: 10px 0 10px 10px;
   border-radius: 5px;
   color: #fff;
   text-decoration: none;
@@ -162,28 +177,28 @@ icon {
 
 .icon:after {
   content: "";
-  position: absolute;
+  position: relative;;
   top: -110%;
   left: -210%;
   width: 200%;
   height: 200%;
   opacity: 0;
   transform: rotate(90deg);
-  
-  background: rgba(255, 255, 255, 0.13);
+
+  background: rgba(95, 95, 95, 0.13);
   background: linear-gradient(
-    to right, 
-    rgba(342, 342, 342, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0.0) 100%
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(95, 95, 95, 0.13) 77%,
+    rgba(95,95, 95, 0.5) 92%,
+    rgba(95, 95, 95, 0.0) 100%
   );
 }
 
 /* Hover state - trigger effect */
 
 .icon:hover:after {
-  opacity: 1;
+  opacity: 5;
   top: -30%;
   left: -30%;
   transition-property: left, top, opacity;
