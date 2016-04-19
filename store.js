@@ -32,7 +32,7 @@ ListStore = {
   addItem: function(itemDescription) {
     var creationRequest = $.ajax({
       type: 'POST',
-      url: "http://listalous.herokuapp.com/lists/nikimarsh77/items",
+      url: "https://listalous.herokuapp.com/lists/nikimarsh77/items",
       data: { description: itemDescription, completed: false }
     });
 
@@ -45,7 +45,7 @@ ListStore = {
   delItem: function(itemId, itemDescription) {
     var creationRequest = $.ajax({
       type: 'DELETE',
-      url: "http://listalous.herokuapp.com/lists/nikimarsh77/items/" + itemId,
+      url: "https://listalous.herokuapp.com/lists/nikimarsh77/items/" + itemId,
       data: { description: itemDescription, completed: false }
     });
 
