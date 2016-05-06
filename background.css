@@ -103,7 +103,7 @@ h2, h3, h4, {
 
 h5 {
   font-size: 1.5em;
-  margin:auto;
+  align-content: flex-end;
   line-height: 1.2558em;
 }
 
