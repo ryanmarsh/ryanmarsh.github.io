@@ -57,12 +57,21 @@ h1{
 
 }
 
-.about, .skills, .project {
+.about, .project {
   display: inline-flex;
   position:relative;
   padding-left: 15px;
   padding-right:15px;
   width: 33%;
+  align-self: auto;
+}
+
+.skills{ 
+  display: inline-flex;
+  position:relative;
+  padding-left: 15px;
+  width: 33%
+  align-self: auto;
 }
 
 .first{
