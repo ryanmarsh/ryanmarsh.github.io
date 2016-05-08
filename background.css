@@ -110,9 +110,8 @@ h5 {
  footer {
    font-size: 1.5em;
    line-height: 1.2558em;
-   margin: 0.4219em, auto, 0.4219em, auto;
-  display: block;
-  padding-top: 5em;
+  display: inline-flex;
+  padding-top: 2em;
  }
 
 svg {
