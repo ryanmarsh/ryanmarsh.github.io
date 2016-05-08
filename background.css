@@ -107,6 +107,12 @@ h2, h3, h4, {
   display: inline-flex;
   padding-top: 2em;
  }
+ 
+ .h5{
+   font-size: 1.5em;
+   display:flex;
+   padding-right: 1em;
+ }
 
 svg {
   padding-top: -2em;
