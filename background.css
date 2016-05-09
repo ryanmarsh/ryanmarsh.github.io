@@ -102,17 +102,11 @@ h2, h3, h4, {
 
 }
 
- footer {
+ footer, h5 {
    font-size: 1.5em;
    line-height: 1.2558em;
   display: inline-flex;
   
- }
- 
- h5 {
-   font-size: 2em;
-   display:inline-flex;
-   padding-right: 1em;
  }
 
 svg {
