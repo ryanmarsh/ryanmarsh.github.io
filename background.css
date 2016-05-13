@@ -138,7 +138,7 @@ button {
 
 button span {
   cursor: pointer;
-  display: inline-flex;
+  display: inline-block;
   position: relative;
   transition: 0.5s;
 }
