@@ -122,7 +122,7 @@ svg:hover {
 }
 
 button {
-  display: inline-flex;
+  display: inline-block;
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
