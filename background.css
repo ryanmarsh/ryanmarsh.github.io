@@ -23,19 +23,6 @@ body{
 
  }
 
- .container li {
-     float: left;
-
- }
-
-.container  li a {
-     display: flex;
-     color: white;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-
- }
 
 .container  li a:hover {
      background-color: #111;
