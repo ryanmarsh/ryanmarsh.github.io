@@ -20,7 +20,7 @@ body{
   justify-content:space-between;
   padding:1em;
 }
-.top .nav .li{
+.top .nav a{
   display:flex;
   padding:1em;
   flex-grow:3;
@@ -29,7 +29,7 @@ body{
 h1{
   display: flex;
   border-top: 2em;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 2em;
 }
 .main{
