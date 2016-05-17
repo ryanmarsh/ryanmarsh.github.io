@@ -5,43 +5,28 @@ body{
   background-image: url();
   background-size: 1500px, 700px;
   background-color: white;
-  background-blend-mode:;
 }
 
- header{
+.top{
    height: 50px;
    display:flex;
    flex-direction:row;
-   flex-grow:1;
    font-color:black;
-   justify-content:space-between;
+   list-style:none;
  }
-
-  .container ul {
-   display:flex;
-   flex-direction:row;
-   flex-grow:1;
-   font-color:black;
-   justify-content:space-between;
-   padding: 1em;
- }
-
-.container .li {
+.top .nav{
   display:flex;
   flex-direction:row;
-  flex-grow: 1;
-  font-color:black;
   justify-content:space-between;
   padding:1em;
 }
+.top .nav .li{
+  display:flex;
+  padding:1em;
+  flex-grow:3;
+}
 
-.container  li a:hover {
-     background-color: #111;
- }
-
-
-
-h1{
+.prime_space{
   border-top: 3em;
   font-size: 3.368em;
   line-height: 1.2656em;
