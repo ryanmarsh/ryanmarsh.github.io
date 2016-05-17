@@ -81,12 +81,9 @@ h2, h3, h4, {
 
 }
 
- footer, h5 {
+ h5 {
    font-size: 1.5em;
-   line-height: 1.2558em;
-  display: inline-flex;
-  align-self: auto;
-  
+   display:flex;
  }
 
 svg {
@@ -100,8 +97,8 @@ svg:hover {
   transform: scale(1.2);
 }
 
-button {
-  display:block;
+.button {
+  display:inline-block;
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
@@ -115,14 +112,14 @@ button {
   align-self:auto
 }
 
-button span {
+.button {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-button span:after {
+button :after {
   content: '»';
   position: absolute;
   opacity: 0;
