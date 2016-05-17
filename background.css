@@ -12,6 +12,9 @@ body{
    height: 50px;
    display:flex;
    flex-direction:row;
+   flex-grow:1;
+   font-color:black;
+   justify-content:space-between;
  }
 
   .container ul {
