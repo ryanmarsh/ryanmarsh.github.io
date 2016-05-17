@@ -97,7 +97,11 @@ svg:hover {
   transform: scale(1.2);
 }
 
-.button {
+.button{
+  display:flex;
+}
+
+button {
   display:inline-block;
   border-radius: 4px;
   background-color: #f4511e;
@@ -112,7 +116,7 @@ svg:hover {
   align-self:auto
 }
 
-.button {
+button {
   cursor: pointer;
   display: inline-block;
   position: relative;
