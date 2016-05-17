@@ -17,13 +17,13 @@ body{
    justify-content:space-between;
  }
 
-  .container ul li {
+  .container ul {
    display:flex;
    flex-direction:row;
    flex-grow:1;
    font-color:black;
    justify-content:space-between;
-   padding:1em;
+   padding: 1em;
  }
 
 
