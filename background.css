@@ -8,7 +8,6 @@ body{
 }
 
 .top{
-   height: 50px;
    display:flex;
    font-color:black;
    margin:0;
@@ -17,13 +16,12 @@ body{
 .top .nav{
   display:flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content:flex-start;
 }
 .nav ul{
   display:flex;
   padding:2em;
   flex-grow:3;
-  justify-content:space-between;
 }
 
 h1{
