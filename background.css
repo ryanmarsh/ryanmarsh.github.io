@@ -17,7 +17,7 @@ body{
    justify-content:space-between;
  }
 
-  .container ul {
+  .container ul li {
    display:flex;
    flex-direction:row;
    flex-grow:1;
