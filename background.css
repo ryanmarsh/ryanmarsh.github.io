@@ -15,6 +15,7 @@ body{
    flex-grow:1;
    font-color:black;
    justify-content:space-between;
+   padding: 1em;
  }
 
   .container ul {
