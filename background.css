@@ -81,9 +81,9 @@ h2, h3, h4, {
 
 }
 
- h5 {
+ .contact {
    font-size: 2em;
-   display:flex;
+   display:inline-flex;
  }
 
 svg {
@@ -99,6 +99,7 @@ svg:hover {
 
 .button{
   display:inline-flex;
+  justify-content:flex-start;
 }
 
 button {
