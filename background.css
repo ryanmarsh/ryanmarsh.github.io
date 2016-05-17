@@ -10,16 +10,17 @@ body{
 .top{
    height: 50px;
    display:flex;
-   flex-direction:row;
+    justify-content:space-between;
    font-color:black;
+   margin:0;
    list-style:none;
  }
 .top .nav{
   display:flex;
-  justify-content:space-between;
+  flex-direction: row;
   padding:1em;
 }
-.top .nav a{
+.nav a{
   display:flex;
   padding:1em;
   flex-grow:3;
