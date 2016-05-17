@@ -23,7 +23,7 @@ body{
   padding:2em;
   flex-grow:3;
 }
-.nav .li{
+.nav li{
   display:flex;
   paddin: 1em;
   
