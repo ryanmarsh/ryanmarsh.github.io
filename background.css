@@ -20,7 +20,7 @@ body{
   flex-direction: row;
   padding:1em;
 }
-.nav a{
+.nav ul{
   display:flex;
   padding:1em;
   flex-grow:3;
