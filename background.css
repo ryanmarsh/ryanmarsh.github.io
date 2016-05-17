@@ -26,12 +26,11 @@ body{
   flex-grow:3;
 }
 
-.prime_space{
+h1{
+  display: flex;
   border-top: 2em;
   font-size: 2em;
   line-height: 2em;
-  display: flex;
-
 }
 .main{
   display:inline-flex;
