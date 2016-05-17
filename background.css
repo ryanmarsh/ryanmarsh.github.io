@@ -18,6 +18,8 @@ body{
    display:flex;
    flex-direction:row;
    flex-grow:3;
+   color:black;
+   
 
  }
 
