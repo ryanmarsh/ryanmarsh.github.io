@@ -27,13 +27,10 @@ body{
 }
 
 .prime_space{
-  border-top: 3em;
-  font-size: 3.368em;
-  line-height: 1.2656em;
-  margin-top: 0.2419em;
-  margin-bottom: 0;
-  text-align: center;
-  display: block;
+  border-top: 2em;
+  font-size: 3em;
+  line-height: 1em;
+  display: flex;
 
 }
 .main{
