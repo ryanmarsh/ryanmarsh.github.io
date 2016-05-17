@@ -17,10 +17,9 @@ body{
   .container ul {
    display:flex;
    flex-direction:row;
-   flex-grow:3;
+   flex-grow:1;
    font-color:black;
-   
-
+   justify-content:space-between;
  }
 
 
