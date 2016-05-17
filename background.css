@@ -81,7 +81,7 @@ h2, h3, h4, {
 
 }
 
- .contact {
+ .contact h5{
    font-size: 2em;
    display:inline-flex;
  }
