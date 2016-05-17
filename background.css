@@ -18,7 +18,7 @@ body{
 .top .nav{
   display:flex;
   flex-direction: row;
-  padding:1em;
+  justify-content:space-between;
 }
 .nav ul{
   display:flex;
