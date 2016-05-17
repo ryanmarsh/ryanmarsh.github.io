@@ -10,12 +10,12 @@ body{
 .top{
    height: 50px;
    display:flex;
-    justify-content:space-between;
+   justify-content:space-between;
    font-color:black;
    margin:0;
-   list-style:none;
+   list-style: none;
  }
-.top .nav{
+.nav{
   display:flex;
   flex-direction: row;
   padding:1em;
