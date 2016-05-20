@@ -10,6 +10,7 @@ body{
 .top{
    display:flex;
    font-color:black;
+   margin-bottom:-1em;
    list-style: none;
  }
 .top .nav{
