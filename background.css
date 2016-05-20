@@ -82,13 +82,15 @@ h2, h3, h4, {
 
 }
 h5 {
-  font-size: 1.5em;
   display: flex;
+  font-size: 1em;
+  justify-content: flex-start;
 }
  .contact {
    font-size: 2em;
    margin-top: -3em;
-   display: inline-flex;
+   display: flex;
+   justify-conent:center;
  }
 
 svg {
