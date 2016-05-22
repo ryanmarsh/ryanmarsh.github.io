@@ -107,6 +107,7 @@ svg:hover {
 #button {
   display:inline-flex;
   justify-content:flex-start;
+  flex-shrink: 1;
   
 }
 
