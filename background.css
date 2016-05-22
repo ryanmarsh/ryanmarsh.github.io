@@ -21,6 +21,9 @@ body{
 .nav ul{
   display:flex;
   padding:1em;
+  font-size:large;
+  font-weight:bold;
+  color:#FFF038;
 }
 .nav li{
   display:flex;
