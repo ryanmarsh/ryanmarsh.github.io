@@ -84,13 +84,13 @@ h2, h3, h4, {
 h5 {
   display: flex;
   font-size: 1em;
+  color: #FFF038;
   justify-content: flex-start;
 }
  .contact {
    font-size: 2em;
    margin-top: -3em;
    display: flex;
-   color:3E00D4;
    justify-conent:center;
  }
 
