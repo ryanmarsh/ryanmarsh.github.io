@@ -25,13 +25,16 @@ body{
   font-size:large;
   font-weight:bold;
   color:#FFF038;
-  text-decoration:none;
+  
 }
 .nav li{
   display:flex;
   justify-content:space-between;
   padding: 1em;
   
+}
+.nav a{
+  text-decoration:none;
 }
 
 h1{
@@ -53,6 +56,9 @@ h1{
   padding-right:15px;
   width: 33%;
   align-self: auto;
+  
+}
+.project p{
   text-decoration:none;
 }
 
@@ -60,18 +66,21 @@ h1{
   display: inline-flex;
   position:relative;
   padding-left: 15px;
-  list-style-type:none;
   width: 33%
   align-self: auto;
   flex: flex-shrink;
 }
+
 
 .first{
   display:inline-flex;
   position: relative;
   padding-left: 25px;
   padding-right: 15px;
-
+  
+}
+.first ul{
+  list-style-type:none;
 }
 
 .second {
