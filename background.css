@@ -57,6 +57,7 @@ h1{
   display: inline-flex;
   position:relative;
   padding-left: 15px;
+  list-style-type:none;
   width: 33%
   align-self: auto;
   flex: flex-shrink;
