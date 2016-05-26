@@ -11,6 +11,7 @@ body{
    display:flex;
    font-color:black;
    list-style: none;
+  
  }
 .top .nav{
   display:flex;
@@ -24,6 +25,7 @@ body{
   font-size:large;
   font-weight:bold;
   color:#FFF038;
+  text-decoration:none;
 }
 .nav li{
   display:flex;
