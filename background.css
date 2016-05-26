@@ -23,9 +23,6 @@ body{
   display:flex;
   padding:1em;
   font-size:large;
-  font-weight:bold;
-  color:#FFF038;
-  
 }
 .nav li{
   display:flex;
@@ -35,6 +32,8 @@ body{
 }
 .nav a{
   text-decoration:none;
+  font-weight:bold;
+  color:#FFF038;
 }
 
 h1{
@@ -58,8 +57,10 @@ h1{
   align-self: auto;
   
 }
-.project p{
+.project a{
   text-decoration:none;
+  font-weight:bold;
+  color:#FFF038;
 }
 
 .skills{ 
@@ -79,7 +80,7 @@ h1{
   padding-right: 15px;
   
 }
-.first ul{
+.first {
   list-style-type:none;
 }
 
@@ -88,7 +89,7 @@ h1{
   position: relative;
   padding-left: 25px;
   padding-right: 15px;
-
+  list-style-type:none;
 }
 
 h2, h3, h4, {
