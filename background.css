@@ -114,9 +114,14 @@ h5 {
  }
 
 svg {
-  padding-top: -2em;
+  
   width:150px;
   height:150px;
+}
+
+svg .design{
+  width: 250px;
+  height:250px;
 }
 
 svg{
