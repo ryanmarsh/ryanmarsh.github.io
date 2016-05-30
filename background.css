@@ -114,7 +114,8 @@ h5 {
  }
 
 svg {
-  
+  display:flex;
+  margin: 1em;
   width:150px;
   height:150px;
 }
