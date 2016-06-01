@@ -113,18 +113,6 @@ h5 {
    justify-conent:center;
  }
 
-svg {
-  display:flex;
-  margin: 1em;
-  width:150px;
-  height:150px;
-}
-
-svg .design{
-  width: 250px;
-  height:250px;
-}
-
 svg{
   transition: all .2s ease-in-out;
 }
