@@ -150,13 +150,14 @@ button {
   transition: 0.5s;
 }
 
-button :after {
+button ::after {
   content: '»';
   position: absolute;
   opacity: 0;
   top: 0;
   right: -20px;
   transition: 0.5s;
+  color: white;
 }
 
 button:hover span {
