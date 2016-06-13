@@ -167,6 +167,7 @@ button:hover span {
 
 button:hover span:after {
   right: 0;
+  opacity: 2;
 }
 
 
