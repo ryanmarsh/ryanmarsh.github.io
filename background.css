@@ -155,7 +155,7 @@ button {
 
 button :after {
   content: '»';
-  position: relative;
+  position: absolute;
   opacity: 0;
   right: -20px;
   transition: 0.5s;
