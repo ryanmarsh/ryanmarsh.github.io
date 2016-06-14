@@ -1,8 +1,8 @@
 body{
   font-size: 19px;
   font-family: "Litania", "Calluna", calibri, candra, optima, arial, sans-serif;
-  color: #black;
-  background-image: url(https://images.unsplash.com/photo-1458640904116-093b74971de9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0c236f26de72aaa9e9ca10b4f0ea0cf6);
+  color: black;
+  background-image: url(https://images.unsplash.com/photo-1462819067004-905a72ea3996?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=4832f28a526c7a3538a887b8fbbfe897);
   background-size: 1500px, 700px;
   background-color: white;
 }
