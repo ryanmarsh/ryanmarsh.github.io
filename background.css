@@ -103,7 +103,7 @@ h2, h3, h4, {
 h5 {
   display: flex;
   font-size: 1em;
-  color: #FFF038;
+  color: black;
   justify-content: flex-start;
 }
  .contact {
