@@ -229,6 +229,9 @@ button:hover span:after {
   opacity: 0;
 }
 
-.cls-2 {
-  color: black;
+path.cls-2 {
+    fill: black;
+}
+polygon.cls-2 {
+    fill: #d54026;
 }
