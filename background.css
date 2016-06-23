@@ -228,3 +228,7 @@ button:hover span:after {
 .icon:active:after {
   opacity: 0;
 }
+
+.cls-2 {
+  color: black;
+}
