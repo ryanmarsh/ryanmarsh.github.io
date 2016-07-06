@@ -2,9 +2,18 @@ body{
   font-size: 19px;
   font-family: "Litania", "Calluna", calibri, candra, optima, arial, sans-serif;
   color: black;
-  background-image: url(https://cloud.githubusercontent.com/assets/6549871/16623398/a32bc2c8-4352-11e6-863f-c54228a12890.jpeg);
-  background-size: 1500px, 700px;
-  background-color: white;
+}
+
+body::after {
+  content: "";
+  background: url(https://cloud.githubusercontent.com/assets/6549871/16623398/a32bc2c8-4352-11e6-863f-c54228a12890.jpeg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 
 .top{
