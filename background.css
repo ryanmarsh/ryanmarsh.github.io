@@ -9,7 +9,7 @@ html {
 body{
   font-size: 19px;
   font-family: "Litania", "Calluna", calibri, candra, optima, arial, sans-serif;
-  color: black;
+  color: white;
   height:100%;
   width:100%;
 }
@@ -27,7 +27,7 @@ body::after {
 
 .top{
    display:flex;
-   font-color:black;
+   color: white;
    list-style: none;
   
  }
@@ -121,7 +121,7 @@ h2, h3, h4, {
 h5 {
   display: flex;
   font-size: 1em;
-  color: black;
+  color: white;
   justify-content: flex-start;
 }
  .contact {
