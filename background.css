@@ -9,6 +9,7 @@ body{
 body::after {
   content: "";
   background: url(https://cloud.githubusercontent.com/assets/6549871/16623398/a32bc2c8-4352-11e6-863f-c54228a12890.jpeg);
+  background-size: 100%;
   opacity: 0.5;
   top: 0;
   left: 0;
