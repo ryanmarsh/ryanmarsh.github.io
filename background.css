@@ -148,7 +148,7 @@ svg:hover {
   
 }
 
-contact-button {
+.contact-button {
  
   border-radius: 4px;
   background-color: #f4511e;
@@ -164,14 +164,14 @@ contact-button {
   align-self:auto
 }
 
-contact-button {
+.contact-button {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-contact-button :after {
+.contact-button :after {
   content: '»';
   position: absolute;
   opacity: 0;
@@ -179,11 +179,11 @@ contact-button :after {
   transition: 0.5s;
 }
 
-contact-button :hover span {
+.contact-button :hover span {
   padding-right: 25px;
 }
 
-contact-button :hover span:after {
+.contact-button :hover span:after {
   right: 0;
   opacity: 2;
 }
