@@ -59,87 +59,6 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:300,100,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="animate.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-shim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-sham.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react-with-addons.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
-  <script src="store.js"></script>
-  <script>
-  ListStore.loadItems()
-    var CreationForm = React.createClass({displayName: "CreationForm",
-      render: function() {
-        return (
-          React.createElement("form", {id: "add-form", onSubmit: this.handleSubmit}, 
-            React.createElement("input", {id: "create", autocorrect: "false", autocomplete: "false", ref: "description", type: "text", placeholder: "Add Something to the list!"})
-          )
-        )
-      },
-
-      handleSubmit: function(event) {
-        event.preventDefault()
-        var description = this.refs.description.getDOMNode().value
-        this.refs.description.getDOMNode().value = ''
-        ListStore.addItem(description)
-
-      }
-    })
-
-    var Item = React.createClass({displayName: "Item",
-      render: function() {
-        var itemClass = this.props.completed ? 'item completed' : 'item'
-        return (
-          React.createElement("li", {className: itemClass}, 
-            React.createElement("span", {className: "complete-button", onClick: this.handleComplete}, '\u2714'), 
-            React.createElement("div", {className: "description"}, this.props.description), 
-            React.createElement("span", {className: "delete-button", onClick: this.handleDelete}, '\u2718')
-
-          )
-
-        )
-      },
-      handleComplete: function(){
-        ListStore.toggleCompleteness(this.props.id)
-      },
-     handleDelete: function() {
-        ListStore.delItem(this.props.id, this.props.description)
-      }
-    })
-
-    var List = React.createClass({displayName: "List",
-      getInitialState: function() {
-        return (
-          {items: [
-
-          ]}
-        )
-      },
-
-      componentWillMount: function() {
-        $(ListStore).on('storeHasChanged', function() {
-          this.setState({ items: ListStore.getItems() })
-        }.bind(this))
-      },
-
-      render: function() {
-        console.log(this.state.items)
-        var itemComponents = this.state.items.map(function(itemData) {
-          return React.createElement(Item, React.__spread({key: 'item-' + itemData.id},  itemData))
-        })
-
-        return (
-          React.createElement("ul", {id: "list"}, 
-            itemComponents
-          )
-        )
-      }
-    })
-
-    React.render(React.createElement(CreationForm, null), document.getElementById('form-container') )
-    React.render(React.createElement(List, null), document.getElementById('list-container') )
-
-  
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHJhbnNmb3JtZWQuanMiLCJzb3VyY2VzIjpbIklubGluZSBKU1ggc2NyaXB0Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUyxDQUFDLFNBQVMsRUFBRTtJQUNuQixJQUFJLGtDQUFrQyw0QkFBQTtNQUNwQyxNQUFNLEVBQUUsV0FBVztRQUNqQjtVQUNFLG9CQUFBLE1BQUssRUFBQSxDQUFBLENBQUMsRUFBQSxFQUFFLENBQUMsVUFBQSxFQUFVLENBQUMsUUFBQSxFQUFRLENBQUUsSUFBSSxDQUFDLFlBQWMsQ0FBQSxFQUFBO1lBQy9DLG9CQUFBLE9BQU0sRUFBQSxDQUFBLENBQUMsRUFBQSxFQUFFLENBQUMsUUFBQSxFQUFRLENBQUMsV0FBQSxFQUFXLENBQUMsT0FBQSxFQUFPLENBQUMsWUFBQSxFQUFZLENBQUMsT0FBQSxFQUFPLENBQUMsR0FBQSxFQUFHLENBQUMsYUFBQSxFQUFhLENBQUMsSUFBQSxFQUFJLENBQUMsTUFBQSxFQUFNLENBQUMsV0FBQSxFQUFXLENBQUMsNEJBQTRCLENBQUEsQ0FBRyxDQUFBO1VBQ2hJLENBQUE7U0FDUjtBQUNULE9BQU87O01BRUQsWUFBWSxFQUFFLFNBQVMsS0FBSyxFQUFFO1FBQzVCLEtBQUssQ0FBQyxjQUFjLEVBQUU7UUFDdEIsSUFBSSxXQUFXLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsVUFBVSxFQUFFLENBQUMsS0FBSztRQUMxRCxJQUFJLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxVQUFVLEVBQUUsQ0FBQyxLQUFLLEdBQUcsRUFBRTtBQUNyRCxRQUFRLFNBQVMsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDOztPQUUvQjtBQUNQLEtBQUssQ0FBQzs7SUFFRixJQUFJLDBCQUEwQixvQkFBQTtNQUM1QixNQUFNLEVBQUUsV0FBVztRQUNqQixJQUFJLFNBQVMsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLFNBQVMsR0FBRyxnQkFBZ0IsR0FBRyxNQUFNO1FBQ2hFO1VBQ0Usb0JBQUEsSUFBRyxFQUFBLENBQUEsQ0FBQyxTQUFBLEVBQVMsQ0FBRSxTQUFXLENBQUEsRUFBQTtZQUN4QixvQkFBQSxNQUFLLEVBQUEsQ0FBQSxDQUFDLFNBQUEsRUFBUyxDQUFDLGlCQUFBLEVBQWlCLENBQUMsT0FBQSxFQUFPLENBQUUsSUFBSSxDQUFDLGNBQWdCLENBQUEsRUFBQyxRQUFnQixDQUFBLEVBQUE7WUFDakYsb0JBQUEsS0FBSSxFQUFBLENBQUEsQ0FBQyxTQUFBLEVBQVMsQ0FBQyxhQUFjLENBQUEsRUFBQyxJQUFJLENBQUMsS0FBSyxDQUFDLFdBQWtCLENBQUEsRUFBQTtBQUN2RSxZQUFZLG9CQUFBLE1BQUssRUFBQSxDQUFBLENBQUMsU0FBQSxFQUFTLENBQUMsZUFBQSxFQUFlLENBQUMsT0FBQSxFQUFPLEdBQUksSUFBSSxDQUFDLFlBQWMsQ0FBQSxFQUFDLFFBQWdCLENBQUE7O0FBRTNGLFVBQWUsQ0FBQTs7U0FFTjtPQUNGO01BQ0QsY0FBYyxFQUFFLFVBQVU7UUFDeEIsU0FBUyxDQUFDLGtCQUFrQixDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDO09BQzVDO0tBQ0YsWUFBWSxFQUFFLFdBQVc7UUFDdEIsU0FBUyxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLEVBQUUsRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLFdBQVcsQ0FBQztPQUN6RDtBQUNQLEtBQUssQ0FBQzs7SUFFRixJQUFJLDBCQUEwQixvQkFBQTtNQUM1QixlQUFlLEVBQUUsV0FBVztRQUMxQjtBQUNSLFVBQVUsQ0FBQyxLQUFLLEVBQUU7O1dBRVAsQ0FBQztTQUNIO0FBQ1QsT0FBTzs7TUFFRCxrQkFBa0IsRUFBRSxXQUFXO1FBQzdCLENBQUMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxFQUFFLENBQUMsaUJBQWlCLEVBQUUsV0FBVztVQUM1QyxJQUFJLENBQUMsUUFBUSxDQUFDLEVBQUUsS0FBSyxFQUFFLFNBQVMsQ0FBQyxRQUFRLEVBQUUsRUFBRSxDQUFDO1NBQy9DLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO0FBQ3JCLE9BQU87O01BRUQsTUFBTSxFQUFFLFdBQVc7UUFDakIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQztRQUM3QixJQUFJLGNBQWMsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsU0FBUyxRQUFRLEVBQUU7VUFDM0QsT0FBTyxvQkFBQyxJQUFJLEVBQUEsZ0JBQUEsQ0FBQyxHQUFBLEVBQUcsQ0FBRSxPQUFPLEdBQUcsUUFBUSxDQUFDLEVBQUcsR0FBQSxDQUFFLEdBQUcsUUFBUyxDQUFFLENBQUE7QUFDbEUsU0FBUyxDQUFDOztRQUVGO1VBQ0Usb0JBQUEsSUFBRyxFQUFBLENBQUEsQ0FBQyxFQUFBLEVBQUUsQ0FBQyxNQUFPLENBQUEsRUFBQTtZQUNYLGNBQWU7VUFDYixDQUFBO1NBQ047T0FDRjtBQUNQLEtBQUssQ0FBQzs7SUFFRixLQUFLLENBQUMsTUFBTSxDQUFDLG9CQUFDLFlBQVksRUFBQSxJQUFBLENBQUcsQ0FBQSxFQUFFLFFBQVEsQ0FBQyxjQUFjLENBQUMsZ0JBQWdCLENBQUMsRUFBRTtBQUM5RSxJQUFJLEtBQUssQ0FBQyxNQUFNLENBQUMsb0JBQUMsSUFBSSxFQUFBLElBQUEsQ0FBRyxDQUFBLEVBQUUsUUFBUSxDQUFDLGNBQWMsQ0FBQyxnQkFBZ0IsQ0FBQyxFQUFFIiwic291cmNlc0NvbnRlbnQiOlsiXG4gIExpc3RTdG9yZS5sb2FkSXRlbXMoKVxuICAgIHZhciBDcmVhdGlvbkZvcm0gPSBSZWFjdC5jcmVhdGVDbGFzcyh7XG4gICAgICByZW5kZXI6IGZ1bmN0aW9uKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgIDxmb3JtIGlkPVwiYWRkLWZvcm1cIiBvblN1Ym1pdD17dGhpcy5oYW5kbGVTdWJtaXR9PlxuICAgICAgICAgICAgPGlucHV0IGlkPSdjcmVhdGUnIGF1dG9jb3JyZWN0PVwiZmFsc2VcIiBhdXRvY29tcGxldGU9XCJmYWxzZVwiIHJlZj1cImRlc2NyaXB0aW9uXCIgdHlwZT0ndGV4dCcgcGxhY2Vob2xkZXI9J0FkZCBTb21ldGhpbmcgdG8gdGhlIGxpc3QhJyAvPlxuICAgICAgICAgIDwvZm9ybT5cbiAgICAgICAgKVxuICAgICAgfSxcblxuICAgICAgaGFuZGxlU3VibWl0OiBmdW5jdGlvbihldmVudCkge1xuICAgICAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpXG4gICAgICAgIHZhciBkZXNjcmlwdGlvbiA9IHRoaXMucmVmcy5kZXNjcmlwdGlvbi5nZXRET01Ob2RlKCkudmFsdWVcbiAgICAgICAgdGhpcy5yZWZzLmRlc2NyaXB0aW9uLmdldERPTU5vZGUoKS52YWx1ZSA9ICcnXG4gICAgICAgIExpc3RTdG9yZS5hZGRJdGVtKGRlc2NyaXB0aW9uKVxuXG4gICAgICB9XG4gICAgfSlcblxuICAgIHZhciBJdGVtID0gUmVhY3QuY3JlYXRlQ2xhc3Moe1xuICAgICAgcmVuZGVyOiBmdW5jdGlvbigpIHtcbiAgICAgICAgdmFyIGl0ZW1DbGFzcyA9IHRoaXMucHJvcHMuY29tcGxldGVkID8gJ2l0ZW0gY29tcGxldGVkJyA6ICdpdGVtJ1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgIDxsaSBjbGFzc05hbWU9e2l0ZW1DbGFzc30+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9J2NvbXBsZXRlLWJ1dHRvbicgb25DbGljaz17dGhpcy5oYW5kbGVDb21wbGV0ZX0+eydcXHUyNzE0J308L3NwYW4+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nZGVzY3JpcHRpb24nPnt0aGlzLnByb3BzLmRlc2NyaXB0aW9ufTwvZGl2PlxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSdkZWxldGUtYnV0dG9uJyBvbkNsaWNrID0ge3RoaXMuaGFuZGxlRGVsZXRlfT57J1xcdTI3MTgnfTwvc3Bhbj5cblxuICAgICAgICAgIDwvbGk+XG5cbiAgICAgICAgKVxuICAgICAgfSxcbiAgICAgIGhhbmRsZUNvbXBsZXRlOiBmdW5jdGlvbigpe1xuICAgICAgICBMaXN0U3RvcmUudG9nZ2xlQ29tcGxldGVuZXNzKHRoaXMucHJvcHMuaWQpXG4gICAgICB9LFxuICAgICBoYW5kbGVEZWxldGU6IGZ1bmN0aW9uKCkge1xuICAgICAgICBMaXN0U3RvcmUuZGVsSXRlbSh0aGlzLnByb3BzLmlkLCB0aGlzLnByb3BzLmRlc2NyaXB0aW9uKVxuICAgICAgfVxuICAgIH0pXG5cbiAgICB2YXIgTGlzdCA9IFJlYWN0LmNyZWF0ZUNsYXNzKHtcbiAgICAgIGdldEluaXRpYWxTdGF0ZTogZnVuY3Rpb24oKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAge2l0ZW1zOiBbXG5cbiAgICAgICAgICBdfVxuICAgICAgICApXG4gICAgICB9LFxuXG4gICAgICBjb21wb25lbnRXaWxsTW91bnQ6IGZ1bmN0aW9uKCkge1xuICAgICAgICAkKExpc3RTdG9yZSkub24oJ3N0b3JlSGFzQ2hhbmdlZCcsIGZ1bmN0aW9uKCkge1xuICAgICAgICAgIHRoaXMuc2V0U3RhdGUoeyBpdGVtczogTGlzdFN0b3JlLmdldEl0ZW1zKCkgfSlcbiAgICAgICAgfS5iaW5kKHRoaXMpKVxuICAgICAgfSxcblxuICAgICAgcmVuZGVyOiBmdW5jdGlvbigpIHtcbiAgICAgICAgY29uc29sZS5sb2codGhpcy5zdGF0ZS5pdGVtcylcbiAgICAgICAgdmFyIGl0ZW1Db21wb25lbnRzID0gdGhpcy5zdGF0ZS5pdGVtcy5tYXAoZnVuY3Rpb24oaXRlbURhdGEpIHtcbiAgICAgICAgICByZXR1cm4gPEl0ZW0ga2V5PXsnaXRlbS0nICsgaXRlbURhdGEuaWR9IHsuLi5pdGVtRGF0YX0vPlxuICAgICAgICB9KVxuXG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgPHVsIGlkPSdsaXN0Jz5cbiAgICAgICAgICAgIHtpdGVtQ29tcG9uZW50c31cbiAgICAgICAgICA8L3VsPlxuICAgICAgICApXG4gICAgICB9XG4gICAgfSlcblxuICAgIFJlYWN0LnJlbmRlcig8Q3JlYXRpb25Gb3JtIC8+LCBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZm9ybS1jb250YWluZXInKSApXG4gICAgUmVhY3QucmVuZGVyKDxMaXN0IC8+LCBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbGlzdC1jb250YWluZXInKSApXG5cbiAgIl19</script>
    </head>
 
   <body>
@@ -176,10 +95,10 @@
          </ul>
        <ul class="second">
          <li></li>
-         <svg class = "icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.18 243.18"><defs><style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;stroke-width:4px;}.cls-2{fill:#231f20;}</style></defs><title>github</title><circle class="cls-1" /><path class="cls-2" d="M207.68,290.17a57.31,57.31,0,0,0-3,8.5c-1,3.84-1.6,6-1.5,9a69,69,0,0,0,1.5,8.5c1,5,1.23,5.36,1,6.5-0.57,2.88-2.52,3.63-5,7-2,2.67-2.76,4.95-4,8.5-1.75,5-2.1,9-2.5,14a67.24,67.24,0,0,0,0,15,63.57,63.57,0,0,0,5,17.5c1.81,4.09,3.53,8,7,12,0.95,1.1,5.66,6.45,15,10.5,14.25,6.18,27.16,4.1,27.5,7,0.15,1.29-2.42,1.41-4.5,5-1.9,3.29-.92,5.21-3,8.5a13.32,13.32,0,0,1-4,4c-4.39,2.91-9.36,2.34-12,2-8.6-1.1-14.38-6.46-16-8-6.23-5.93-4.75-9.29-11.5-14.5-2.1-1.62-7-5.3-12-4-1.68.44-3.94,1.6-4,3s2.06,2,5,4.5a44.34,44.34,0,0,1,5,5.5,60.15,60.15,0,0,1,7,9.5c2.74,4.85,1.74,5.38,4,8.5a23.72,23.72,0,0,0,8.5,7,31.16,31.16,0,0,0,12,3.5,40.75,40.75,0,0,0,10-.5c4.15-.82,5.64-1.93,7-1,1,0.71,1.14,2,1,9-0.17,8.86-.39,10.25-1,12-1.47,4.2-3.18,4.66-3,6,1.1,8.32,69.29,6,69.5,1.5,0.06-1.16-4.44-1.78-6-6a9.81,9.81,0,0,1,0-6c0.47-1.89.31-9.93,0-26-0.23-11.95-.74-13.88-2-16-2.14-3.6-5.28-5.8-4.5-7.5,0.64-1.39,3.28-1.08,7-1.5s6.89-1.62,13-4,11.06-4.31,16-8.5c4.73-4,7.19-8.13,9.5-12a62.22,62.22,0,0,0,7.5-19c1-4.71,2.9-14.68-.5-26-2-6.78-3.86-12.85-8.5-17.5a9.41,9.41,0,0,1-3-4.5c-0.88-3.53,1.56-5.27,2.5-10.5,0.56-3.13.21-5.42-.5-10-0.92-6-1.36-9-3.5-10-1.21-.59-3.44,0-7.84,1.33-2.32.68-2.68,0.9-6.5,2.17-5.29,1.75-5.36,1.58-7.66,2.5a32,32,0,0,0-7,3.5c-3.48,2.42-3.61,3.81-5.5,4-2.34.23-2.44-1.87-6.68-3.33a28.59,28.59,0,0,0-8.82-1.17c-1,0-1.06,0-2.51,0-3,0-4.21-.22-6.5-0.33-2.91-.14-2.52.07-7.17,0-3.23-.05-3.18-0.15-5.82-0.17-2,0-2.11,0-6.84.17-5.19.13-5.63,0.07-7.16,0.33a15.15,15.15,0,0,0-5.51,1.67c-1.63.93-1.79,1.53-2.83,1.67-1.58.21-2.51-1-5.33-3-1-.69-2.75-1.74-6.32-3.83a55,55,0,0,0-5.5-3,35.48,35.48,0,0,0-6-2A36.65,36.65,0,0,0,207.68,290.17Z" transform="translate(-148.73 -238.55)"/></svg>
+         <svg class = "icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.18 243.18"><defs><style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;stroke-width:4px;}.cls-2{fill:#231f20;}</style></defs><title>github</title><circle class="cls-1" cx="121.59" cy="121.59" r="119.59"/><path class="cls-2" d="M207.68,290.17a57.31,57.31,0,0,0-3,8.5c-1,3.84-1.6,6-1.5,9a69,69,0,0,0,1.5,8.5c1,5,1.23,5.36,1,6.5-0.57,2.88-2.52,3.63-5,7-2,2.67-2.76,4.95-4,8.5-1.75,5-2.1,9-2.5,14a67.24,67.24,0,0,0,0,15,63.57,63.57,0,0,0,5,17.5c1.81,4.09,3.53,8,7,12,0.95,1.1,5.66,6.45,15,10.5,14.25,6.18,27.16,4.1,27.5,7,0.15,1.29-2.42,1.41-4.5,5-1.9,3.29-.92,5.21-3,8.5a13.32,13.32,0,0,1-4,4c-4.39,2.91-9.36,2.34-12,2-8.6-1.1-14.38-6.46-16-8-6.23-5.93-4.75-9.29-11.5-14.5-2.1-1.62-7-5.3-12-4-1.68.44-3.94,1.6-4,3s2.06,2,5,4.5a44.34,44.34,0,0,1,5,5.5,60.15,60.15,0,0,1,7,9.5c2.74,4.85,1.74,5.38,4,8.5a23.72,23.72,0,0,0,8.5,7,31.16,31.16,0,0,0,12,3.5,40.75,40.75,0,0,0,10-.5c4.15-.82,5.64-1.93,7-1,1,0.71,1.14,2,1,9-0.17,8.86-.39,10.25-1,12-1.47,4.2-3.18,4.66-3,6,1.1,8.32,69.29,6,69.5,1.5,0.06-1.16-4.44-1.78-6-6a9.81,9.81,0,0,1,0-6c0.47-1.89.31-9.93,0-26-0.23-11.95-.74-13.88-2-16-2.14-3.6-5.28-5.8-4.5-7.5,0.64-1.39,3.28-1.08,7-1.5s6.89-1.62,13-4,11.06-4.31,16-8.5c4.73-4,7.19-8.13,9.5-12a62.22,62.22,0,0,0,7.5-19c1-4.71,2.9-14.68-.5-26-2-6.78-3.86-12.85-8.5-17.5a9.41,9.41,0,0,1-3-4.5c-0.88-3.53,1.56-5.27,2.5-10.5,0.56-3.13.21-5.42-.5-10-0.92-6-1.36-9-3.5-10-1.21-.59-3.44,0-7.84,1.33-2.32.68-2.68,0.9-6.5,2.17-5.29,1.75-5.36,1.58-7.66,2.5a32,32,0,0,0-7,3.5c-3.48,2.42-3.61,3.81-5.5,4-2.34.23-2.44-1.87-6.68-3.33a28.59,28.59,0,0,0-8.82-1.17c-1,0-1.06,0-2.51,0-3,0-4.21-.22-6.5-0.33-2.91-.14-2.52.07-7.17,0-3.23-.05-3.18-0.15-5.82-0.17-2,0-2.11,0-6.84.17-5.19.13-5.63,0.07-7.16,0.33a15.15,15.15,0,0,0-5.51,1.67c-1.63.93-1.79,1.53-2.83,1.67-1.58.21-2.51-1-5.33-3-1-.69-2.75-1.74-6.32-3.83a55,55,0,0,0-5.5-3,35.48,35.48,0,0,0-6-2A36.65,36.65,0,0,0,207.68,290.17Z" transform="translate(-148.73 -238.55)"/></svg>
 
            <li ></li>
-           <svg class = "icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242.18 242.18"><defs><style>.cls-1{fill:#fff;stroke-width:3px;}.cls-1,.cls-2{stroke:#231f20;stroke-miterlimit:10;}.cls-2{fill:#d54026;}</style></defs><title>adobe</title><circle class="cls-1" /><polygon class="cls-2" points="97.51 45.57 28.48 196.61 136.92 196.61 124.03 166.01 99.14 165.6 91.01 165.6 121.97 103.04 164.95 194.45 213.7 194.04 145.86 45.57 97.51 45.57"/></svg>
+           <svg class = "icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242.18 242.18"><defs><style>.cls-1{fill:#fff;stroke-width:3px;}.cls-1,.cls-2{stroke:#231f20;stroke-miterlimit:10;}.cls-2{fill:#d54026;}</style></defs><title>adobe</title><circle class="cls-1" cx="121.09" cy="121.09" r="119.59"/><polygon class="cls-2" points="97.51 45.57 28.48 196.61 136.92 196.61 124.03 166.01 99.14 165.6 91.01 165.6 121.97 103.04 164.95 194.45 213.7 194.04 145.86 45.57 97.51 45.57"/></svg>
          </ul>
          </section>
       </div>
@@ -212,130 +131,39 @@
        <div class = "next">
       <h6>
         <!-- Trigger/Open The Modal -->
-    <button id="myBtn">React Project</button>
-
+    <button id="myBtn">Check out courses here</button>
     <!-- The Modal -->
     <div id="myModal" class="modal">
-
       <!-- Modal content -->
       <div class="modal-content">
- -        <span class="close">×</span>
- -        <div class="modal-header">
- 	 <div id="container">
-    <h1>Ryan's List</h1>
-    <div id="app">
-      <div id='form-container'></div>
-      <div id='list-container'></div>
-    </div>
-  </div>
-
-  <script type="text/jsx">
-  ListStore.loadItems()
-    var CreationForm = React.createClass({
-      render: function() {
-        return (
-          <form id="add-form" onSubmit={this.handleSubmit}>
-            <input id='create' autocorrect="false" autocomplete="false" ref="description" type='text' placeholder='Add Something to the list!' />
-          </form>
-        )
-      },
-
-      handleSubmit: function(event) {
-        event.preventDefault()
-        var description = this.refs.description.getDOMNode().value
-        this.refs.description.getDOMNode().value = ''
-        ListStore.addItem(description)
-
-      }
-    })
-
-    var Item = React.createClass({
-      render: function() {
-        var itemClass = this.props.completed ? 'item completed' : 'item'
-        return (
-          <li className={itemClass}>
-            <span className='complete-button' onClick={this.handleComplete}>{'\u2714'}</span>
-            <div className='description'>{this.props.description}</div>
-            <span className='delete-button' onClick = {this.handleDelete}>{'\u2718'}</span>
-
-          </li>
-
-        )
-      },
-      handleComplete: function(){
-        ListStore.toggleCompleteness(this.props.id)
-      },
-     handleDelete: function() {
-        ListStore.delItem(this.props.id, this.props.description)
-      }
-    })
-
-    var List = React.createClass({
-      getInitialState: function() {
-        return (
-          {items: [
-
-          ]}
-        )
-      },
-
-      componentWillMount: function() {
-        $(ListStore).on('storeHasChanged', function() {
-          this.setState({ items: ListStore.getItems() })
-        }.bind(this))
-      },
-
-      render: function() {
-        console.log(this.state.items)
-        var itemComponents = this.state.items.map(function(itemData) {
-          return <Item key={'item-' + itemData.id} {...itemData}/>
-        })
-
-        return (
-          <ul id='list'>
-            {itemComponents}
-          </ul>
-        )
-      }
-    })
-
-    React.render(<CreationForm />, document.getElementById('form-container') )
-    React.render(<List />, document.getElementById('list-container') )
-
-  </script>
-
+        <span class="close">×</span>
+        <div class="modal-header">
+          <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+          <h6>Modal Footer</h3>
+        </div>
+      </div>
     </div>
     <script>
- -          <h2>Modal Header</h2>
- -        </div>
- -        <div class="modal-body">
- -          <p>Some text in the Modal Body</p>
- -          <p>Some other text...</p>
- -        </div>
- -        <div class="modal-footer">
- -          <h6>Modal Footer</h3>
- -        </div>
- -      </div>
-      
     // Get the modal
     var modal = document.getElementById('myModal');
-
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
-
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
     // When the user clicks the button, open the modal
     btn.onclick = function() {
         modal.style.display = "block";
     }
-
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     }
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
@@ -343,13 +171,11 @@
         }
     }
     </script>
-
     </h3>
     </div>
       </section>
       </div>
     </div>
-
     <footer>
       <div class = "contact">
       <h5> Contact </h5>
@@ -360,3 +186,4 @@
     </footer>
   </body>
 </html>
+
