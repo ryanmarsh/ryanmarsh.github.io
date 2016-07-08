@@ -179,11 +179,11 @@ button :after {
   transition: 0.5s;
 }
 
-button :hover span {
+button:hover span {
   padding-right: 25px;
 }
 
-button :hover span:after {
+button:hover span:after {
   right: 0;
   opacity: 2;
 }
@@ -254,7 +254,7 @@ polygon.cls-2 {
     fill: #d54026;
 }
 
-myBtn {
+button1 {
   background: none !important;
   border: none;
   padding:0;
@@ -321,4 +321,3 @@ myBtn {
   padding: 2px 16px;
   color: white;
 }
-
