@@ -175,18 +175,18 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
-/*.bg-primary {
-  background-color: #BD5D38 !important;
+.bg-primary {
+  background-color: #007bff !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #007bff !important;
 }
 
 a {
-  color: #BD5D38;
+  color: #007bff;
 }
-*/
+
 a:hover, a:focus, a:active {
   color: #824027;
 }
